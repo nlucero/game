@@ -65,7 +65,7 @@ export class Character {
         return this.x - this.width / 2;
     }
 
-    get right() {
+    get rigth() {
         return this.x + this.width / 2;
     }
 

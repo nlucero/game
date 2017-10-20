@@ -286,12 +286,14 @@ export default class Game {
         const charRight = this._character.rigth;
 
         for (const platform of this._platforms) {
+            const platforTop = platform.top;
             const platformBottom = platform.bottom;
             const platformLeft = platform.left;
             const platformRight = platform.right;
 
-            if (charBottom >= platform.y && charBottom <= platformBottom
-                && ((charLeft >= platformLeft && charLeft <= platformRight) || (charRight >= platformLeft && charRight <= platformRight))
+            if (charBottom >= platforTop && 
+                charBottom <= platformBottom && 
+                ((charLeft >= platformLeft && charLeft <= platformRight) || (charRight >= platformLeft && charRight <= platformRight))
             ) {
                 return platform;
             }
